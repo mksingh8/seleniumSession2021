@@ -23,11 +23,16 @@ driver.find_element_by_class_name("form-control").clear()
 driver.find_element_by_class_name("form-control").send_keys("manish3")
 driver.find_element_by_css_selector(".form-control").clear()
 driver.find_element_by_css_selector(".form-control").send_keys("manish4")
-#
-# anchor = driver.find_element_by_tag_name("a")
-# driver.find_element_by_link_text()
+# Pricing
+img = driver.find_element_by_tag_name("a").screenshot_as_base64
+print("****" + img + "****")
+with open("../Screenshots/ss.docx", 'w') as f:
+    f.write(img)
+    f.close()
+
+# driver.find_element_by_link_text("Pricing").click()
 # driver.find_element_by_partial_link_text("")
 # driver.find_element(By.ID, "")
 
-time.sleep(5)
-driver.close()
+time.sleep(2)
+driver.quit()
