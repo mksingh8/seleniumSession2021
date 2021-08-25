@@ -11,3 +11,8 @@ def implicit_wait():
     driver.get(url)
     driver.close()
 
+
+if __name__ == '__main__':
+    implicit_wait()
+
+
