@@ -23,6 +23,7 @@ def explicit_wait_2():
     wait = WebDriverWait(driver, TIMEOUT, Polling_Duration, ignored_exceptions=None)
     search_box = wait.until(EC.visibility_of_element_located((By.NAME, 'q')))
     search_box.send_keys("explicit wait", Keys.RETURN)
+    wait.until(EC.title_contains("Search"))
     driver.close()
 
 

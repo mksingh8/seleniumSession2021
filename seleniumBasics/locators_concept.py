@@ -41,3 +41,26 @@ driver.find_element_by_xpath("//a/following-sibling::*[0]")
 # not possible through css_selector
 driver.find_element_by_xpath("//a/preceding-sibling::*[0]")
 
+
+"//input[@name='email' or @type='text']"
+"//input[@value='Login' and @type='submit']"
+"//a[text()='Login']"
+"//input[contains(@name,'name') and contains(@type,'text')]"
+"//htmltag[contains(text(),'value')]"
+
+# contains() with text() and attribute:
+"//htmltag[contains(text(),'value') and contains(@attr,'value')]"
+
+"(//input[@ type='text'])[position() = 1]"
+"(//input[@class ='form-control'])[position()=1]"
+"(//input[@ class ='form-control'])[1]"
+"(//ul[@ class ='footer-nav'])[1] // a"
+
+"(//input[@ class ='form-control'])[last()]"
+
+# parent to child:'
+"//div[ @class ='private-form__input-wrapper']/input"
+"// div[@ class ='private-form__input-wrapper']/child::input[ @ id = 'username']"
+
+# parent to ancestor:'
+"// input[ @ id = 'username']/ancestor::div"
