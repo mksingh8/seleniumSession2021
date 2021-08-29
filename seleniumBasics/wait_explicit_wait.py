@@ -11,8 +11,8 @@ url = "https://www.google.com/"
 driver = invoke_browser()
 driver.get(url)
 
-def explicit_wait():
 
+def explicit_wait():
     wait = WebDriverWait(driver, TIMEOUT)
     search_box = wait.until(EC.visibility_of_element_located((By.NAME, 'q')))
     search_box.send_keys("explicit wait", Keys.RETURN)
@@ -22,11 +22,11 @@ def explicit_wait():
 def explicit_wait_2():
     wait = WebDriverWait(driver, TIMEOUT, Polling_Duration, ignored_exceptions=None)
     search_box = wait.until(EC.visibility_of_element_located((By.NAME, 'q')))
-    search_box.send_keys("explicit wait", Keys.RETURN)
+    search_box.send_keys("explicit wait with Polling", Keys.RETURN)
     wait.until(EC.title_contains("Search"))
     driver.close()
 
 
 if __name__ == '__main__':
+    # explicit_wait()
     explicit_wait_2()
-
